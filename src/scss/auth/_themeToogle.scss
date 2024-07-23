@@ -1,0 +1,43 @@
+@use "../../base/_mixins" as m;
+
+.theme-toggle-button {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: transparent;
+  font-weight: 700;
+  transition: 0.6s;
+  color: #c7c7c5d3;
+
+  &:hover {
+    color: white
+  }
+
+  @include m.desktop {
+    font-size: 2rem;
+    padding: 1rem 2.5rem;
+  }
+
+
+  &.dark-mode {
+    background-color: transparent;
+
+    color: #f0f0f0;
+
+    &:hover {
+      background-color: #555;
+    }
+  }
+
+  &.light-mode {
+    background-color: #f0f0f0;
+    color: #333;
+
+    &:hover {
+      background-color: #ddd;
+    }
+  }
+}
