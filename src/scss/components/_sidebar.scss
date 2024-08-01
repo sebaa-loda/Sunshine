@@ -1,0 +1,88 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 17vw;
+  padding: 1rem 1.4rem;
+  background: v.$sidebar;
+
+  &__header {
+    position: relative;
+  }
+}
+
+.image {
+  min-width: 6rem;
+  display: flex;
+  align-items: center;
+}
+
+.toggle {
+  position: absolute;
+  top: 50%;
+  right: -2.5rem;
+  transform: translateY(-50%);
+  height: 2.5rem;
+  width: 2.5rem;
+  background: v.$primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: v.$sidebar;
+  font-size: 2.5rem;
+}
+
+.menu{
+  &__links{
+    padding: 0;
+  }
+}
+
+.link {
+  height: 5rem;
+  margin-top: 1rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  
+}
+
+.enlace {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 0.6rem;
+  transition: v.$tran-04;
+  font-size: 1.5rem;
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 6rem;
+    font-size: 2rem;
+    padding-left: 1rem;
+  }
+
+  &__icon,
+  &__text {
+    color: v.$text;
+    transition: v.$tran-03;
+  }
+}
+
+.enlace:hover {
+  background: v.$primary;
+}
+
+.enlace:hover .enlace__icon,
+.enlace:hover .enlace__text {
+  color: v.$sidebar;
+}

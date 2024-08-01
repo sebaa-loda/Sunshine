@@ -1,2 +1,3 @@
 export * from "./Home"
-export * from "./Detail"
+export * from "./Forecast"
+export * from "./Weather"

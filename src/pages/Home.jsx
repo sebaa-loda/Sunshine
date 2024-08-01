@@ -1,11 +1,17 @@
-import {Navbar} from "../components/Navbar"
+import {Weather} from "./Weather"
 import "../scss/pages/_home.scss"
+import { Forecast } from "./Forecast"
+import { Sidebar } from "../components/Sidebar"
+import { SearchBar } from "../components/SearchBar"
 
 export const Home = () => {
   return (
     <div>
-      <h1>hola</h1>
-      <Navbar/>
+      
+      <SearchBar />
+      {/* <Sidebar /> */}
+      <Weather />
+      <Forecast />
     </div>
   )
 }

@@ -1,0 +1,72 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.weather {
+  border: 1px solid red;
+  border-radius: 2rem;
+  margin: 0 auto;
+  width: 90%;
+  height: 50vh;
+
+  &__container {
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5rem;
+
+  &__name,
+  &__region,
+  &__country {
+    margin: 0;
+  }
+}
+
+.current {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  padding: 0 5rem;
+  font-size: 2rem;
+
+
+  &__condition,
+  &__temp {
+    margin: 0;
+  }
+
+  &__condition{
+    width: 25rem;
+  }
+
+  &__temp{
+    padding-left: 1rem;
+    padding-right: 1.5rem;
+    border-right: solid 2px v.$text;
+  }
+
+  &__icon {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+.extra {
+  display: flex;
+
+  justify-content: space-around;
+
+  &__time,
+  &__wind,
+  &__hum {
+    margin: 0;
+  }
+}
